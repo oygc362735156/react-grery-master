@@ -23,7 +23,7 @@ module.exports = {
     loaders: [
       {
         test: /\.(png|jpg|gif|woff|woff2|css|sass|scss|less|styl)$/,
-        loader: 'null-loader'
+        loader: 'file-loader!url-loader?limit=8192!style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}!sass-loader?outputStyle=expanded'
       },
       {
         test: /\.(js|jsx)$/,
